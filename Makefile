@@ -5,11 +5,11 @@ LIBS := -lm
 
 all: solve
 
-solve: solve.o $(OBJS)
+solve: main.o $(OBJS)
 	$(CC) $(LFLAGS) $^ -o $@ $(LIBS)
 
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) $<
 
 clean:
-	rm solve *.o 2> /dev/null
+	rm main *.o 2> /dev/null
