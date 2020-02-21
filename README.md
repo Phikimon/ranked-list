@@ -1,4 +1,4 @@
-Problem:
+**Problem**:
 
 There is a file filled with following structures:
 ```
@@ -18,11 +18,12 @@ struct node {
 ```
 In this file `rank` is the number(starting with the 0) of the node that we met while jumping to next_id of the nodes.
 
-Additional restrictions:
+**Additional restrictions**:
 1. Process shall use no more that 2 GB of RAM.
 2. 6 GB file on SSD machine has to be processed in no more that 1 hour.
 
-Example:
+**Example**:
+```
 +---------+---------+
 |  Input  |  Output |
 +---------+---------+
@@ -31,8 +32,9 @@ Example:
 | 5 3     | 3 2     |
 | 4 0     | 4 3     |
 +---------+---------+
+```
 
-Solution:
+**Solution**:
 1. Read 2GB file parts and sort them via qsort.
 2. Use minheap to merge sort the whole file.
 2. Find the most frequently read elements that are located in the
